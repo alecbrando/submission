@@ -11,6 +11,6 @@ data class CategoryItemDto(
     val category: String?,
     val description: String?,
     val image: String?,
-    @SerializedName("common_places")
+    @SerializedName("common_locations")
     val commonPlaces: List<String?>?,
 )
