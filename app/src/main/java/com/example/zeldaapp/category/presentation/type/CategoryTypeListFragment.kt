@@ -30,7 +30,7 @@ class CategoryTypeListFragment : BaseFragment<FragmentCategoryTypeListBinding>(
 
     private fun setupAdapter(list: List<String>) {
         binding.rvCategoryType.adapter = CategoryTypeAdapter(list) { categoryType ->
-            onCategoryTypeOnClick(categoryType)
+            onCategoryTypeOnClick(categoryType.lowercase())
         }
     }
 

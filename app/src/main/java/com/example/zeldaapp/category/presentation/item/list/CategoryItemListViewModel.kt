@@ -19,7 +19,7 @@ class CategoryItemListViewModel(
 
     val searchIcon = MediatorLiveData<Int>().apply {
         addSource(searchValue) {
-            value = if (it.isNullOrEmpty()) R.drawable.ic_search else R.drawable.ic_search
+            value = if (it.isNullOrEmpty()) R.drawable.ic_search else R.drawable.ic_clear
         }
 
         value = R.drawable.ic_search

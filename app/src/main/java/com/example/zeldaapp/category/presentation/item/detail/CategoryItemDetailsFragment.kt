@@ -1,5 +1,9 @@
 package com.example.zeldaapp.category.presentation.item.detail
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.example.commons.base.BaseFragment
 import com.example.commons.extension.observeAndNavigateBack
 import com.example.zeldaapp.R
@@ -18,8 +22,14 @@ class CategoryItemDetailsFragment : BaseFragment<FragmentCategoryItemDetailsBind
         parametersOf(categoryParamsVm.categoryItem)
     }
 
-    override fun setupViewModel() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupObservers()
+    }
 
+    override fun setupViewModel() {
+        binding.vm = categoryItemListVm
+        lifecycle.addObserver(categoryItemListVm)
     }
 
     override fun setupObservers() {

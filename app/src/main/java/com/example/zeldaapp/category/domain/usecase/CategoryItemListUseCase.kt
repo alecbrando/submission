@@ -1,6 +1,7 @@
 package com.example.zeldaapp.category.domain.usecase
 
 import com.example.zeldaapp.category.data.repository.ICategoryRepository
+import com.example.zeldaapp.category.domain.mapper.toCategoryItemList
 import com.example.zeldaapp.category.domain.model.CategoryItem
 
 class CategoryItemListUseCase(
@@ -9,6 +10,6 @@ class CategoryItemListUseCase(
 
     suspend operator fun invoke(
         category: String
-    ) = emptyList<CategoryItem>() // TODO: Implement the request here
+    ) = repository.getCategoryItemList(category).toCategoryItemList()
 
 }

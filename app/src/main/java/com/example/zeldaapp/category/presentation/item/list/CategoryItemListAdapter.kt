@@ -29,6 +29,7 @@ internal class CategoryItemListAdapter(
         holder.binding.run {
             val categoryItem = getItem(position)
             item = categoryItem
+            tvDescription.text = categoryItem.description
             root.setOnClickListener { onItemClick(categoryItem) }
         }
     }

@@ -9,7 +9,7 @@ fun CategoryItemDto.toCategoryItem() = CategoryItem(
     id = id.handleOpt(),
     name = name.handleOpt().capitalize(),
     category = category.handleOpt(),
-    description = descriptions.handleOpt(),
+    description = description.handleOpt(),
     image = image.handleOpt(),
     commonPlaces = commonPlaces?.map { it.handleOpt() }.handleOpt()
 )

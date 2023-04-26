@@ -15,6 +15,7 @@ import org.koin.dsl.module
 object CategoryDi {
 
     val module = module {
+        viewModel { CategoryTypeListViewModel() }
         viewModel { CategoryParamsViewModel() }
         viewModel { params ->
             CategoryItemListViewModel(
